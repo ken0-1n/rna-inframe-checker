@@ -1,6 +1,7 @@
 # rna-inrame-checker 
 
 ## Introduction
+Checks, if gene fusion is inframe.
 
 ## Dependency
 
@@ -11,7 +12,7 @@ Python (>= 2.7) , pyfasta packages.
 [blat](https://genome.ucsc.edu/FAQ/FAQblat.html)
 
 ### database
-hg19.fasta
+hg19.fasta,
 [refGene.txt, knownGene.txt and ensGene.txt](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/)
 
 ## Install
@@ -31,7 +32,7 @@ python setup.py build install
 ## Preparation
 
 ### input file
-Prepare the list of fusion junctions (The command input file).
+Prepare the list of fusion breakpoints (The command input file).
 1. chromosome for the 1st breakpoint
 1. coordinate for the 1st breakpoint
 1. direction of the 1st breakpoint
@@ -40,7 +41,7 @@ Prepare the list of fusion junctions (The command input file).
 1. direction of the 2nd breakpoint
 
 ### database
-ALL_GENE
+ALL_GENE,
 CODING_INFO
 
 ## Commands
@@ -50,3 +51,4 @@ usage: inframe_checker inframe [-h] -a ALL_GENE -r REF_GENE -c CODING_INFO -b BL
 ```
 
 ## Results
+If the gene fusion is in-frame, the gene name interprets in the list of entry,
