@@ -1,0 +1,30 @@
+#! /usr/bin/env python
+
+import argparse
+from inframe_checker.run import *
+
+
+####################
+# top level parser
+parser = argparse.ArgumentParser( description = 'rna-inframe-checker' )
+parser.add_argument("--version", action = "version", version = "rna-inframe-checker-0.1.0")
+subparsers = parser.add_subparsers()
+
+####################
+# realignment filter 
+parse_parser = subparsers.add_parser("inframe")
+
+parse_parser.add_argument( '-a', '--all_gene', type = str, default = None, required = True)
+parse_parser.add_argument( '-r', '--ref_gene', type = str, default = None, required = True)
+parse_parser.add_argument( '-c', '--coding_info', type = str, default = None, required = True)
+parse_parser.add_argument( '-b', '--blat_path', type = str, default = None, required = True)
+parse_parser.add_argument( '-p', '--blat_params', type = str, default = "-maxIntron=5")
+parse_parser.add_argument( '-i', '--input_junc', type = str, default = None, required = True)
+parse_parser.add_argument( '-o', '--output_dir', type = str, default = None, required = True)
+
+parse_parser.set_defaults(func = inframe_main)
+
+args = parser.parse_args()
+args.func(args)
+
+
