@@ -26,7 +26,7 @@ python setup.py build install
 
 ## Preparation
 
--input junction file
+Prepare the list of fusion junctions (INPUT_JUNC).
 1. chromosome for the 1st breakpoint
 1. coordinate for the 1st breakpoint
 1. direction of the 1st breakpoint
