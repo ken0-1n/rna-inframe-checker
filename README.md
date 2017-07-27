@@ -12,13 +12,13 @@ Python (>= 2.7) , pyfasta packages.
 
 ## Install
 
-type the following command
+Please, ｔype the following command
 ```
 git clone https://github.com/ken0-1n/rna-inframe-checker.git
 python setup.py install
 ```
 
-Then, install the package by standard python package protocol (https://docs.python.org/2/install/)
+Then, install the package by standard python package protocol
 ```
 cd rna-inframe-checker
 python setup.py build install
